@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Dashboard ADM</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Dashboard Administrador</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<main class="dashboard-container">
+
+<h1>Visão Geral do Sistema</h1>
+<p class="subtitle">Acompanhe os indicadores gerais do Efetivo360</p>
+
+<!-- ================= INDICADORES ================= -->
+<section class="adm-stats-grid">
+
+  <div class="stat-card">
+    <span class="stat-title">Colaboradores</span>
+    <strong class="stat-value">128</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-title">Líderes</span>
+    <strong class="stat-value">12</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-title">Em Serviço</span>
+    <strong class="stat-value success">96</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-title">Paralisação</span>
+    <strong class="stat-value warning">8</strong>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-title">Solicitações Pendentes</span>
+    <strong class="stat-value danger">5</strong>
+  </div>
+
+</section>
+
+<!-- ================= ALERTAS DO DIA ================= -->
+<h2 style="margin-top:32px;">Alertas do Dia</h2>
+<p class="subtitle">Eventos críticos de hoje</p>
+
+<section class="adm-stats-grid" id="alertasGrid">
+
+  <!-- ALERTA -->
+  <a href="historico.html?critico=1&tipo=Paralisacao"
+     class="stat-card alert critical"
+     data-value="3">
+    <span class="stat-title">Paralisações</span>
+    <strong class="stat-value danger">3</strong>
+    <span class="stat-desc">Atividades paralisadas hoje</span>
+  </a>
+
+  <a href="historico.html?critico=1&tipo=AjusteStatus"
+     class="stat-card alert critical"
+     data-value="2">
+    <span class="stat-title">Ajustes de Status</span>
+    <strong class="stat-value danger">2</strong>
+    <span class="stat-desc">Ajustes realizados hoje</span>
+  </a>
+
+  <a href="historico.html?critico=1&tipo=Solicitacao"
+     class="stat-card alert warning"
+     data-value="4">
+    <span class="stat-title">Solicitações</span>
+    <strong class="stat-value warning">4</strong>
+    <span class="stat-desc">Solicitações tratadas</span>
+  </a>
+
+</section>
+
+<!-- ================= GRÁFICO SIMPLES ================= -->
+<h2 style="margin-top:32px;">Tendência Semanal</h2>
+<p class="subtitle">Paralisações nos últimos dias</p>
+
+<section class="simple-chart">
+
+  <div class="chart-bar">
+    <span>Seg</span>
+    <div style="height:20%"></div>
+  </div>
+
+  <div class="chart-bar">
+    <span>Ter</span>
+    <div style="height:40%"></div>
+  </div>
+
+  <div class="chart-bar">
+    <span>Qua</span>
+    <div style="height:30%"></div>
+  </div>
+
+  <div class="chart-bar">
+    <span>Qui</span>
+    <div style="height:60%"></div>
+  </div>
+
+  <div class="chart-bar">
+    <span>Sex</span>
+    <div style="height:25%"></div>
+  </div>
+
+</section>
+
+<!-- ================= ATALHOS ================= -->
+<section class="adm-shortcuts">
+
+<h2>Acessos Rápidos</h2>
+
+<div class="shortcut-grid">
+  <a href="usuarios.html" class="shortcut-card">👥 Gerenciar Usuários</a>
+  <a href="disciplinas.html" class="shortcut-card">🧩 Disciplinas</a>
+  <a href="atividades.html" class="shortcut-card">🛠️ Atividades</a>
+  <a href="motivos-paralisacao.html" class="shortcut-card">⛔ Motivos de Paralisação</a>
+  <a href="metas.html" class="shortcut-card">🎯 Metas</a>
+  <a href="solicitacoes.html" class="shortcut-card">📄 Solicitações</a>
+  <a href="historico.html" class="shortcut-card">📊 Histórico Geral</a>
+</div>
+
+</section>
+
+</main>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  // Esconde alertas com valor 0
+  document.querySelectorAll('.stat-card.alert').forEach(card => {
+    const value = parseInt(card.dataset.value, 10);
+    if (value === 0) {
+      card.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
