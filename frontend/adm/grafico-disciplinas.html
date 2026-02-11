@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Gráfico por Disciplina</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<!-- ================= HEADER ================= -->
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Gráfico por Disciplina</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<!-- ================= CONTEÚDO ================= -->
+<main class="dashboard-container">
+
+<h1>Paralisação x Execução por Disciplina</h1>
+<p class="subtitle">
+  Comparativo diário de horas por disciplina
+</p>
+
+<!-- ================= FILTRO ================= -->
+<section class="filter-bar compact">
+
+  <input type="date" class="filter-input compact" />
+
+  <button class="secondary-btn small compact">Filtrar</button>
+
+</section>
+
+<!-- ================= GRÁFICO ================= -->
+<section class="table-card">
+
+<div class="discipline-chart">
+
+  <!-- PINTURA -->
+  <div class="chart-row">
+    <span class="chart-label">Pintura</span>
+
+    <div class="chart-bars">
+      <div class="bar exec" style="width:70%">
+        Execução 70h
+      </div>
+      <div class="bar pause" style="width:30%">
+        Paralisação 30h
+      </div>
+    </div>
+  </div>
+
+  <!-- MONTAGEM -->
+  <div class="chart-row">
+    <span class="chart-label">Montagem</span>
+
+    <div class="chart-bars">
+      <div class="bar exec" style="width:80%">
+        Execução 80h
+      </div>
+      <div class="bar pause" style="width:20%">
+        Paralisação 20h
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLDAGEM -->
+  <div class="chart-row">
+    <span class="chart-label">Soldagem</span>
+
+    <div class="chart-bars">
+      <div class="bar exec" style="width:60%">
+        Execução 60h
+      </div>
+      <div class="bar pause" style="width:40%">
+        Paralisação 40h
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+</main>
+
+</body>
+</html>

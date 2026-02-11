@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Motivos de Paralisação</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Motivos de Paralisação</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Administrador</span>
+      <span class="user-role">ADM</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Motivos de Paralisação</h1>
+    <p class="subtitle">
+      Cadastro, controle e importação de motivos de paralisação
+    </p>
+
+    <!-- AÇÕES -->
+    <section class="user-actions">
+      <button class="primary-btn">➕ Novo Motivo</button>
+      <button class="secondary-btn">📥 Importar Motivos</button>
+    </section>
+
+    <!-- LISTA -->
+    <section class="table-card">
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Motivo</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Chuva</td>
+            <td><span class="status-badge ativo">Ativo</span></td>
+            <td class="actions">✏️ 🔒</td>
+          </tr>
+
+          <tr>
+            <td>Falta de material</td>
+            <td><span class="status-badge ativo">Ativo</span></td>
+            <td class="actions">✏️ 🔒</td>
+          </tr>
+
+          <tr>
+            <td>Liberação de área</td>
+            <td><span class="status-badge inativo">Inativo</span></td>
+            <td class="actions">✏️</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </section>
+
+    <!-- IMPORTAÇÃO -->
+    <section class="import-card">
+
+      <h2>Importar Motivos</h2>
+      <p class="subtitle">
+        Aceita arquivos CSV ou Excel (.xlsx)
+      </p>
+
+      <ul class="import-rules">
+        <li>Arquivo com uma coluna: <strong>Motivo</strong></li>
+        <li>Motivos duplicados serão ignorados</li>
+        <li>Motivos importados entram como <strong>Ativos</strong></li>
+      </ul>
+
+      <input type="file" accept=".csv,.xlsx" />
+
+      <div class="form-actions">
+        <button class="secondary-btn">Cancelar</button>
+        <button class="primary-btn">Importar</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

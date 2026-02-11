@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | RDC - Relatório Diário de Campo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">RDC - Relatório Diário de Campo</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-role">Líder</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Relatório Diário de Campo</h1>
+    <p class="subtitle">
+      Registro único das atividades do dia
+    </p>
+
+    <!-- RDC -->
+    <section class="rdc-card">
+
+      <!-- DADOS GERAIS -->
+      <div class="rdc-grid">
+        <div class="form-group">
+          <label>Data</label>
+          <input type="date" />
+        </div>
+
+        <div class="form-group">
+          <label>Líder</label>
+          <input type="text" value="Carlos Silva" disabled />
+        </div>
+      </div>
+
+      <!-- CONDIÇÕES METEOROLÓGICAS -->
+      <h2>🌤️ Condições Meteorológicas</h2>
+
+      <div class="rdc-grid">
+        <div class="form-group">
+          <label>Manhã</label>
+          <select>
+            <option>Bom</option>
+            <option>Ruim</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Tarde</label>
+          <select>
+            <option>Bom</option>
+            <option>Ruim</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ATIVIDADES DO LÍDER -->
+      <h2>📋 Atividades do Dia</h2>
+
+      <!-- ATIVIDADE -->
+      <div class="activity-card">
+
+        <div class="activity-header">
+          <strong>Pintura Estrutural — Área A</strong>
+          <span class="activity-total">
+            Avanço acumulado: <b>65%</b>
+          </span>
+        </div>
+
+        <div class="activity-grid">
+          <div class="form-group">
+            <label>Avanço do dia (%)</label>
+            <input type="number" placeholder="Ex: 10" />
+          </div>
+
+          <div class="progress-view">
+            <div class="progress-bar">
+              <div class="progress-fill success" style="width: 65%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Observação da atividade</label>
+          <textarea placeholder="Observações específicas desta atividade"></textarea>
+        </div>
+
+      </div>
+
+      <!-- ATIVIDADE -->
+      <div class="activity-card">
+
+        <div class="activity-header">
+          <strong>Montagem de Estruturas — Galpão B</strong>
+          <span class="activity-total">
+            Avanço acumulado: <b>40%</b>
+          </span>
+        </div>
+
+        <div class="activity-grid">
+          <div class="form-group">
+            <label>Avanço do dia (%)</label>
+            <input type="number" placeholder="Ex: 5" />
+          </div>
+
+          <div class="progress-view">
+            <div class="progress-bar">
+              <div class="progress-fill warning" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Observação da atividade</label>
+          <textarea placeholder="Observações específicas desta atividade"></textarea>
+        </div>
+
+      </div>
+
+      <!-- AÇÕES -->
+      <div class="form-actions">
+        <button class="secondary-btn">Cancelar</button>
+        <button class="primary-btn">Salvar RDC do Dia</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Trocar Senha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="login-body">
+
+  <div class="login-container">
+
+    <div class="login-card">
+
+      <img
+        src="assets/logo-efetivo360.png"
+        alt="Efetivo360"
+        class="login-logo"
+      />
+
+      <h1 class="login-title">Trocar Senha</h1>
+      <p class="login-subtitle">
+        Primeiro acesso — defina sua nova senha
+      </p>
+
+      <form id="trocarSenhaForm">
+
+        <div class="input-group">
+          <label for="novaSenha">Nova senha</label>
+          <input
+            type="password"
+            id="novaSenha"
+            placeholder="Digite a nova senha"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="confirmarSenha">Confirmar senha</label>
+          <input
+            type="password"
+            id="confirmarSenha"
+            placeholder="Confirme a nova senha"
+            required
+          />
+        </div>
+
+        <div id="erro" class="login-error"></div>
+
+        <button type="submit" class="primary-btn">
+          Salvar senha
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="trocar-senha.js"></script>
+
+</body>
+</html>
+

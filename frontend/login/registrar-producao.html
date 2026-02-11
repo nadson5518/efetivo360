@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Registrar Produção</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Registrar Produção</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-role">Líder</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Registrar Produção</h1>
+    <p class="subtitle">
+      Informe a produção realizada no dia
+    </p>
+
+    <!-- FORMULÁRIO -->
+    <section class="production-card">
+
+      <div class="form-group">
+        <label>Data</label>
+        <input type="date" />
+      </div>
+
+      <div class="form-group">
+        <label>Grupo</label>
+        <select>
+          <option value="">Selecione o grupo</option>
+          <option>Grupo 01 — Área A</option>
+          <option>Grupo 02 — Galpão B</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Atividade</label>
+        <input type="text" value="Pintura Estrutural" disabled />
+      </div>
+
+      <div class="form-group">
+        <label>Quantidade Produzida</label>
+        <input type="number" placeholder="Ex: 120" />
+      </div>
+
+      <div class="form-group">
+        <label>Unidade</label>
+        <select>
+          <option>m²</option>
+          <option>un</option>
+          <option>kg</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Observação</label>
+        <textarea placeholder="Observações sobre a produção"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="secondary-btn">Cancelar</button>
+        <button class="primary-btn">Registrar Produção</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

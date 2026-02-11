@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Gerenciar Usuários</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Gerenciar Usuários</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<main class="dashboard-container">
+
+<h1>Usuários</h1>
+<p class="subtitle">Cadastro, busca, filtros e importação de colaboradores</p>
+
+<!-- AÇÕES -->
+<section class="user-actions">
+  <button class="primary-btn" id="btnNovoUsuario">➕ Novo Usuário</button>
+  <button class="secondary-btn">📥 Importar Colaboradores</button>
+</section>
+
+<!-- LISTA -->
+<section class="table-card">
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Matrícula</th>
+      <th>Nome</th>
+      <th>Disciplina</th>
+      <th>Função</th>
+      <th>Perfil</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody id="usuariosTabela"></tbody>
+</table>
+</section>
+
+</main>
+
+<!-- ================= MODAL USUÁRIO ================= -->
+<div class="modal-overlay" id="modalUsuario" style="display:none;">
+  <div class="modal">
+
+    <h2 id="modalTitulo">Usuário</h2>
+
+    <form id="usuarioForm">
+
+      <div class="form-grid">
+
+        <div class="input-group">
+          <label>Nome</label>
+          <input type="text" id="nome" required />
+        </div>
+
+        <div class="input-group">
+          <label>Matrícula</label>
+          <input type="text" id="matricula" maxlength="6" required />
+        </div>
+
+        <div class="input-group">
+          <label>Perfil</label>
+          <select id="perfil" required>
+            <option value="">Selecione</option>
+            <option value="ADM">Administrador</option>
+            <option value="Lider">Líder</option>
+            <option value="Colaborador">Colaborador</option>
+          </select>
+        </div>
+
+        <div class="input-group" id="disciplinaGroup" style="display:none;">
+          <label>Disciplina</label>
+          <select id="disciplina">
+            <option value="">Selecione</option>
+            <option>Pintura</option>
+            <option>Montagem</option>
+            <option>Soldagem</option>
+          </select>
+        </div>
+
+        <div class="input-group" id="funcaoGroup" style="display:none;">
+          <label>Função</label>
+          <input type="text" id="funcao" placeholder="Ex: Pintor Industrial" />
+        </div>
+
+        <div class="input-group" id="liderGroup" style="display:none;">
+          <label>Líder Responsável</label>
+          <select id="lider">
+            <option value="">Selecione o líder</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div id="mensagem" class="login-error"></div>
+
+      <div class="form-actions">
+        <button type="button" class="secondary-btn" id="btnCancelar">Cancelar</button>
+        <button type="submit" class="primary-btn">Salvar</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="usuarios.js"></script>
+</body>
+</html>

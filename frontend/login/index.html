@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="login-body">
+
+  <div class="login-container">
+
+    <div class="login-card">
+
+      <img
+        src="assets/logo-efetivo360.png"
+        alt="Efetivo360"
+        class="login-logo"
+      />
+
+      <h1 class="login-title">Efetivo360</h1>
+      <p class="login-subtitle">Acesso ao sistema</p>
+
+      <!-- FORMULÁRIO -->
+      <form id="loginForm">
+
+        <div class="input-group">
+          <label for="matricula">Matrícula</label>
+          <input
+            type="text"
+            id="matricula"
+            placeholder="Digite sua matrícula"
+            maxlength="6"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+
+        <!-- ERRO -->
+        <div id="erro" class="login-error"></div>
+
+        <button type="submit" class="primary-btn">
+          Entrar
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

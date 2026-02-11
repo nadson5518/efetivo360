@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Meu Status</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Meu Status</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">João Silva</span>
+      <span class="user-role">Colaborador</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Meu Status</h1>
+    <p class="subtitle">
+      Informe seu status atual de trabalho
+    </p>
+
+    <!-- STATUS ATUAL -->
+    <section class="current-status">
+      <span class="status-label">Status Atual</span>
+      <div class="status-current service">
+        🟢 Em Serviço
+      </div>
+      <span class="status-time">
+        Desde: <strong>07:00</strong>
+      </span>
+    </section>
+
+    <!-- ALTERAR STATUS -->
+    <section class="status-actions">
+
+      <h2>Alterar Status</h2>
+
+      <div class="status-buttons">
+
+        <button class="status-btn service">Em Serviço</button>
+        <button class="status-btn lunch">Almoço</button>
+        <button class="status-btn warehouse">Almoxarifado</button>
+
+        <!-- PARALISAÇÃO COM LISTA EMBUTIDA -->
+        <div class="status-stop-wrapper">
+
+          <button class="status-btn stop">
+            Paralisação
+          </button>
+
+          <div class="stop-inline">
+
+            <select>
+              <option value="">Motivo da paralisação</option>
+              <option>Chuva</option>
+              <option>Falta de material</option>
+              <option>Liberação de área</option>
+              <option>Problema com equipamento</option>
+              <option>Orientação da segurança</option>
+            </select>
+
+            <button class="confirm-stop">
+              Confirmar
+            </button>
+
+          </div>
+
+        </div>
+
+        <button class="status-btn absence">Falta</button>
+        <button class="status-btn off">Folga</button>
+
+      </div>
+
+    </section>
+
+    <!-- RESUMO DO DIA -->
+    <section class="status-summary">
+
+      <h2>Resumo do Dia</h2>
+
+      <div class="summary-grid">
+
+        <div class="summary-item">
+          <span>Em Serviço</span>
+          <strong>7h00</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Almoço</span>
+          <strong>1h00</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Paralisação</span>
+          <strong>0h30</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

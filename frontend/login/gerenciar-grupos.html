@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Gerenciar Grupos (Atividades)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Gerenciar Grupos (Atividades)</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-role">Líder</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Grupos de Atividades</h1>
+    <p class="subtitle">
+      Gerencie os colaboradores dos grupos e finalize as atividades
+    </p>
+
+    <!-- LISTA DE GRUPOS -->
+    <section class="group-list">
+
+      <!-- GRUPO -->
+      <div class="group-card">
+
+        <div class="group-header">
+          <div>
+            <strong>Grupo 01</strong>
+            <span class="group-activity">
+              📍 Área A — Pintura Estrutural
+            </span>
+          </div>
+
+          <div class="group-actions">
+            <button class="icon-btn">👥 Editar Colaboradores</button>
+            <button class="icon-btn success">✅ Finalizar Atividade</button>
+          </div>
+        </div>
+
+        <p class="group-description">
+          Pintura industrial em estrutura metálica da área A.
+        </p>
+
+        <!-- COLABORADORES -->
+        <div class="group-members">
+          <span class="member">João Silva</span>
+          <span class="member">Maria Santos</span>
+          <span class="member">Carlos Lima</span>
+          <span class="member add">➕ Adicionar</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL DE CONFIRMAÇÃO (VISUAL) -->
+  <div class="modal-overlay">
+    <div class="modal">
+
+      <h2>Finalizar atividade?</h2>
+      <p>
+        Após a finalização, não será possível alterar os colaboradores
+        deste grupo.
+      </p>
+
+      <div class="modal-actions">
+        <button class="secondary-btn">Cancelar</button>
+        <button class="primary-btn">Confirmar Finalização</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

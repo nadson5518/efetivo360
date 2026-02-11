@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Histórico Geral</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<!-- ================= HEADER ================= -->
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Histórico Geral</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<!-- ================= CONTEÚDO ================= -->
+<main class="dashboard-container">
+
+<h1>Histórico Geral</h1>
+<p class="subtitle">
+  Registro completo de ações e alterações do sistema
+</p>
+
+<!-- ================= FILTROS ================= -->
+<section class="filter-bar compact">
+
+  <select class="filter-select compact">
+    <option value="">Tipo de Evento</option>
+    <option>Login</option>
+    <option>Paralisação</option>
+    <option>Ajuste de Status</option>
+    <option>Solicitação</option>
+    <option>Produção</option>
+    <option>RDC</option>
+    <option>Meta</option>
+    <option>Transferência</option>
+  </select>
+
+  <select class="filter-select compact">
+    <option value="">Lançado por</option>
+    <option>Administrador (ADM)</option>
+    <option>Carlos Silva (Líder)</option>
+    <option>Lucas Rocha (Líder)</option>
+  </select>
+
+  <select class="filter-select compact">
+    <option value="">Aprovado por</option>
+    <option>Administrador (ADM)</option>
+  </select>
+
+  <input type="date" class="filter-input compact" />
+
+  <!-- 🔴 SOMENTE CRÍTICOS -->
+  <label class="critical-toggle">
+    <input type="checkbox" id="onlyCritical" />
+    <span>Somente críticos</span>
+  </label>
+
+</section>
+
+<!-- ================= LISTA ================= -->
+<section class="table-card">
+
+<table class="data-table" id="historicoTable">
+  <thead>
+    <tr>
+      <th>Data / Hora</th>
+      <th>Evento</th>
+      <th>Lançado por</th>
+      <th>Aprovado por</th>
+      <th>Descrição</th>
+      <th>Detalhes</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <!-- ================= DIA ================= -->
+  <tr class="group-day">
+    <td colspan="6">📅 <strong>15/01/2026</strong></td>
+  </tr>
+
+  <!-- ================= USUÁRIO ================= -->
+  <tr class="group-user">
+    <td colspan="6">👤 <strong>Carlos Silva (Líder)</strong></td>
+  </tr>
+
+  <!-- EVENTO CRÍTICO -->
+  <tr class="event-critical">
+    <td>09:10</td>
+    <td>Paralisação <span class="badge critical">Crítico</span></td>
+    <td>Carlos Silva (Líder)</td>
+    <td>—</td>
+    <td>Status alterado para Paralisação</td>
+    <td>Motivo: Chuva • 2h</td>
+  </tr>
+
+  <!-- EVENTO CRÍTICO -->
+  <tr class="event-critical">
+    <td>11:40</td>
+    <td>Ajuste de Status <span class="badge critical">Crítico</span></td>
+    <td>Carlos Silva (Líder)</td>
+    <td>Administrador (ADM)</td>
+    <td>Ajuste aprovado</td>
+    <td>Execução → Paralisação</td>
+  </tr>
+
+  <!-- ================= USUÁRIO ================= -->
+  <tr class="group-user">
+    <td colspan="6">👤 <strong>Administrador (ADM)</strong></td>
+  </tr>
+
+  <!-- EVENTO MÉDIO -->
+  <tr class="event-warning">
+    <td>15:20</td>
+    <td>Solicitação <span class="badge warning">Atenção</span></td>
+    <td>Lucas Rocha (Líder)</td>
+    <td>Administrador (ADM)</td>
+    <td>Solicitação aprovada</td>
+    <td>Ajuste de produção</td>
+  </tr>
+
+  <!-- EVENTO NORMAL -->
+  <tr class="event-normal">
+    <td>17:05</td>
+    <td>Produção <span class="badge normal">Info</span></td>
+    <td>Lucas Rocha (Líder)</td>
+    <td>—</td>
+    <td>Lançamento de produção</td>
+    <td>120 peças</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const toggle = document.getElementById("onlyCritical");
+  const rows = document.querySelectorAll("#historicoTable tbody tr");
+
+  toggle.addEventListener("change", () => {
+    rows.forEach(row => {
+      if (toggle.checked) {
+        row.style.display = row.classList.contains("event-critical")
+          ? ""
+          : "none";
+      } else {
+        row.style.display = "";
+      }
+    });
+  });
+</script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  // Ativa "Somente críticos"
+  if (params.get("critico") === "1") {
+    const toggle = document.getElementById("onlyCritical");
+    if (toggle) {
+      toggle.checked = true;
+      toggle.dispatchEvent(new Event("change"));
+    }
+  }
+
+  // Filtra por tipo de evento (visual)
+  const tipo = params.get("tipo");
+  if (tipo) {
+    document.querySelectorAll("#historicoTable tbody tr").forEach(row => {
+      if (!row.innerText.toLowerCase().includes(tipo.toLowerCase())) {
+        row.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

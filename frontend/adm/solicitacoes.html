@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Solicitações</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Solicitações</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Administrador</span>
+      <span class="user-role">ADM</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Solicitações</h1>
+    <p class="subtitle">
+      Aprovação e controle das solicitações por disciplina e líder
+    </p>
+
+    <!-- FILTROS -->
+    <section class="filter-bar compact">
+      <select class="filter-select compact">
+        <option value="">Disciplina</option>
+        <option>Pintura</option>
+        <option>Montagem</option>
+        <option>Soldagem</option>
+      </select>
+
+      <select class="filter-select compact">
+        <option value="">Líder</option>
+        <option>Carlos Silva</option>
+        <option>Lucas Rocha</option>
+      </select>
+
+      <select class="filter-select compact">
+        <option value="">Status</option>
+        <option>Pendente</option>
+        <option>Aprovada</option>
+        <option>Reprovada</option>
+      </select>
+
+      <button class="secondary-btn small compact">Filtrar</button>
+    </section>
+
+    <!-- BLOCO POR LÍDER -->
+    <section class="leader-requests">
+
+      <!-- DISCIPLINA -->
+      <h2 class="discipline-title">🧩 Pintura</h2>
+
+      <!-- LÍDER -->
+      <div class="leader-block">
+
+        <div class="leader-header">
+          <span class="leader-name">👤 Carlos Silva</span>
+          <button class="primary-btn small">✔️ Aprovar todas</button>
+        </div>
+
+        <section class="table-card">
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>12/01/2026</td>
+                <td>Ajuste de Horário</td>
+                <td>Entrada 07:00 → 08:00</td>
+                <td><span class="status-badge ativo">Pendente</span></td>
+                <td class="actions">✔️ ❌</td>
+              </tr>
+
+              <tr>
+                <td>12/01/2026</td>
+                <td>Ajuste de Status</td>
+                <td>Paralisação por chuva</td>
+                <td><span class="status-badge ativo">Pendente</span></td>
+                <td class="actions">✔️ ❌</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </section>
+
+      </div>
+
+      <!-- OUTRO LÍDER -->
+      <div class="leader-block">
+
+        <div class="leader-header">
+          <span class="leader-name">👤 Lucas Rocha</span>
+          <button class="primary-btn small">✔️ Aprovar todas</button>
+        </div>
+
+        <section class="table-card">
+
+          <table class="data-table">
+            <tbody>
+              <tr>
+                <td>11/01/2026</td>
+                <td>Alteração de RDC</td>
+                <td>Correção de avanço diário</td>
+                <td><span class="status-badge ativo">Pendente</span></td>
+                <td class="actions">✔️ ❌</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

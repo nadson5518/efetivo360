@@ -1,0 +1,15 @@
+{
+  "name": "efetivo360-backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "lowdb": "^6.0.1",
+    "uuid": "^9.0.1"
+  }
+}

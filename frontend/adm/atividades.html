@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Atividades</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Atividades</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Administrador</span>
+      <span class="user-role">ADM</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Atividades</h1>
+    <p class="subtitle">
+      Cadastro, acompanhamento e controle operacional das atividades
+    </p>
+
+    <!-- AÇÕES -->
+    <section class="user-actions">
+      <button class="primary-btn">➕ Nova Atividade</button>
+    </section>
+
+    <!-- LISTA -->
+    <section class="table-card">
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Ordem</th>
+            <th>Atividade</th>
+            <th>Disciplina</th>
+            <th>Líder</th>
+            <th>Colab.</th>
+            <th>Local</th>
+            <th>Descrição</th>
+            <th>Prazo</th>
+            <th>Avanço</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- EXECUÇÃO -->
+          <tr>
+            <td>450012345</td>
+            <td>Pintura Estrutural</td>
+            <td>Pintura</td>
+            <td>
+              <select class="leader-select">
+                <option selected>Carlos Silva</option>
+                <option>Pedro Almeida</option>
+              </select>
+            </td>
+            <td>
+              <span class="collab-count">12</span>
+            </td>
+            <td>Área A</td>
+            <td>Pintura de estruturas metálicas</td>
+            <td>30/01/2026</td>
+            <td>
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+              </div>
+            </td>
+            <td>
+              <span class="activity-status execution">Execução</span>
+            </td>
+            <td class="actions">✏️ ⏸️</td>
+          </tr>
+
+          <!-- PAUSA -->
+          <tr>
+            <td>450098765</td>
+            <td>Montagem de Tubulação</td>
+            <td>Montagem</td>
+            <td>
+              <select class="leader-select">
+                <option selected>Lucas Rocha</option>
+                <option>Marcos Lima</option>
+              </select>
+            </td>
+            <td>
+              <span class="collab-count">7</span>
+            </td>
+            <td>Área B</td>
+            <td>Montagem de linhas de processo</td>
+            <td>15/02/2026</td>
+            <td>
+              <div class="progress-bar">
+                <div class="progress warning" style="width: 40%;">40%</div>
+              </div>
+            </td>
+            <td>
+              <span class="activity-status paused">Pausa</span>
+            </td>
+            <td class="actions">✏️ ▶️</td>
+          </tr>
+
+          <!-- FINALIZADA -->
+          <tr>
+            <td>450001234</td>
+            <td>Soldagem Estrutural</td>
+            <td>Soldagem</td>
+            <td>
+              <span class="leader-locked">João Mendes</span>
+            </td>
+            <td>
+              <span class="collab-count finished">0</span>
+            </td>
+            <td>Área C</td>
+            <td>Soldagem de suportes metálicos</td>
+            <td>10/01/2026</td>
+            <td>
+              <div class="progress-bar">
+                <div class="progress finished" style="width: 100%;">100%</div>
+              </div>
+            </td>
+            <td>
+              <span class="activity-status finished">Finalizada</span>
+            </td>
+            <td class="actions">🔒</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

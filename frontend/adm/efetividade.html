@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Efetividade (HH)</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<!-- ================= HEADER ================= -->
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Efetividade (HH)</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<!-- ================= CONTEÚDO ================= -->
+<main class="dashboard-container">
+
+<h1>Efetividade</h1>
+<p class="subtitle">
+  Homem-hora por disciplina, líder e atividade (visão diária)
+</p>
+
+<!-- ================= FILTRO (DIA) ================= -->
+<section class="filter-bar compact">
+
+  <select class="filter-select compact">
+    <option value="">Disciplina</option>
+    <option>Pintura</option>
+    <option>Montagem</option>
+    <option>Soldagem</option>
+  </select>
+
+  <select class="filter-select compact">
+    <option value="">Líder</option>
+    <option>Carlos Silva</option>
+    <option>Lucas Rocha</option>
+    <option>Marcos Lima</option>
+  </select>
+
+  <input type="date" class="filter-input compact" />
+
+  <button class="secondary-btn small compact">Filtrar</button>
+  <button class="primary-btn small compact">⬇️ Exportar</button>
+
+</section>
+
+<!-- =================================================
+     DISCIPLINA
+================================================= -->
+<section class="discipline-block">
+
+<h2 class="discipline-title">🧩 Pintura</h2>
+
+<h3 class="leader-title">👤 Carlos Silva</h3>
+
+<!-- ================= ATIVIDADE ================= -->
+<section class="activity-block">
+
+  <div class="activity-header">
+    <div>
+      <strong>Pintura Estrutural – Área A</strong><br />
+      <span class="activity-meta">
+        Equipe: 5 colaboradores
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== RESUMO DA EQUIPE ===== -->
+  <div class="hh-summary">
+
+    <div class="hh-card exec">
+      <span>Execução</span>
+      <strong>32h</strong>
+    </div>
+
+    <!-- PARALISAÇÃO COM TOOLTIP -->
+    <div class="hh-card pause tooltip">
+      <span>Paralisação</span>
+      <strong>8h</strong>
+
+      <div class="tooltip-content">
+        <strong>Motivos da paralisação</strong>
+        <ul>
+          <li>Chuva — 5h</li>
+          <li>Falta de material — 3h</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hh-card other">
+      <span>Outros</span>
+      <strong>4h</strong>
+    </div>
+
+    <div class="hh-card total">
+      <span>Total</span>
+      <strong>44h</strong>
+    </div>
+
+    <div class="hh-card efficiency medium">
+      <span>Efetividade</span>
+      <strong>73%</strong>
+    </div>
+
+  </div>
+
+  <!-- ===== DETALHE POR COLABORADOR ===== -->
+  <section class="table-card">
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Colaborador</th>
+          <th>Execução (h)</th>
+          <th>Paralisação (h)</th>
+          <th>Outros (h)</th>
+          <th>Total (h)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>João Silva</td>
+          <td>8</td>
+          <td class="tooltip">
+            1
+            <div class="tooltip-content">
+              <strong>Motivos da paralisação</strong>
+              <ul>
+                <li>Chuva — 1h</li>
+              </ul>
+            </div>
+          </td>
+          <td>1</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <td>Maria Santos</td>
+          <td>7</td>
+          <td class="tooltip">
+            2
+            <div class="tooltip-content">
+              <strong>Motivos da paralisação</strong>
+              <ul>
+                <li>Falta de material — 2h</li>
+              </ul>
+            </div>
+          </td>
+          <td>0</td>
+          <td>9</td>
+        </tr>
+
+        <tr>
+          <td>Pedro Lima</td>
+          <td>6</td>
+          <td class="tooltip">
+            2
+            <div class="tooltip-content">
+              <strong>Motivos da paralisação</strong>
+              <ul>
+                <li>Chuva — 1h</li>
+                <li>Liberação de área — 1h</li>
+              </ul>
+            </div>
+          </td>
+          <td>1</td>
+          <td>9</td>
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+        <tr class="total-row">
+          <th>Total da Equipe</th>
+          <th>32</th>
+          <th>8</th>
+          <th>4</th>
+          <th>44</th>
+        </tr>
+      </tfoot>
+
+    </table>
+
+  </section>
+
+</section>
+</section>
+
+</main>
+
+</body>
+</html>

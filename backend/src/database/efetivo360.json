@@ -1,0 +1,260 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "matricula": "000001",
+      "senha": "5518002",
+      "perfil": "ADM",
+      "disciplina": null,
+      "primeiroAcesso": false,
+      "status": "Ativo",
+      "funcao": null,
+      "liderId": null
+    },
+    {
+      "id": 1768567767393,
+      "nome": "ELIAS ALVES SANTANA",
+      "matricula": "139830",
+      "senha": "139830",
+      "perfil": "ADM",
+      "disciplina": null,
+      "primeiroAcesso": true,
+      "status": "Ativo"
+    },
+    {
+      "id": 1768572114071,
+      "nome": "LEANDSON DARIO DA SILVA SANTOS",
+      "matricula": "142211",
+      "senha": "142211",
+      "perfil": "ADM",
+      "disciplina": null,
+      "primeiroAcesso": true,
+      "status": "Ativo"
+    },
+    {
+      "id": 1768573066019,
+      "nome": "NADSON SILVA LOPES DOS SANTOS",
+      "matricula": "005028",
+      "senha": "5518002",
+      "perfil": "ADM",
+      "disciplina": null,
+      "primeiroAcesso": false,
+      "status": "Ativo"
+    }
+  ],
+  "historico": [
+    {
+      "id": 1768565674478,
+      "data": "16/01/2026",
+      "hora": "09:14:34",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768565964004,
+      "data": "16/01/2026",
+      "hora": "09:19:24",
+      "evento": "Login",
+      "descricao": "Falha de autenticação",
+      "lancado_por": "000001",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    },
+    {
+      "id": 1768565970089,
+      "data": "16/01/2026",
+      "hora": "09:19:30",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768566377681,
+      "data": "16/01/2026",
+      "hora": "09:26:17",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768566404804,
+      "data": "16/01/2026",
+      "hora": "09:26:44",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567140731,
+      "data": "16/01/2026",
+      "hora": "09:39:00",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567205285,
+      "data": "16/01/2026",
+      "hora": "09:40:05",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567211033,
+      "data": "16/01/2026",
+      "hora": "09:40:11",
+      "evento": "Troca de Senha",
+      "descricao": "Senha alterada no primeiro acesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567290908,
+      "data": "16/01/2026",
+      "hora": "09:41:30",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567300571,
+      "data": "16/01/2026",
+      "hora": "09:41:40",
+      "evento": "Login",
+      "descricao": "Falha de autenticação",
+      "lancado_por": "000001",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    },
+    {
+      "id": 1768567303410,
+      "data": "16/01/2026",
+      "hora": "09:41:43",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768567767393,
+      "data": "16/01/2026",
+      "hora": "09:49:27",
+      "evento": "Cadastro de Usuário",
+      "descricao": "Usuário ELIAS ALVES SANTANA (ADM) cadastrado",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768572114071,
+      "data": "16/01/2026",
+      "hora": "11:01:54",
+      "evento": "Cadastro de Usuário",
+      "descricao": "Usuário LEANDSON DARIO DA SILVA SANTOS (ADM) cadastrado",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768573066019,
+      "data": "16/01/2026",
+      "hora": "11:17:46",
+      "evento": "Cadastro de Usuário",
+      "descricao": "Usuário NADSON SILVA LOPES DOS SANTOS (ADM) cadastrado",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768573082767,
+      "data": "16/01/2026",
+      "hora": "11:18:02",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "NADSON SILVA LOPES DOS SANTOS",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768573088484,
+      "data": "16/01/2026",
+      "hora": "11:18:08",
+      "evento": "Troca de Senha",
+      "descricao": "Senha alterada no primeiro acesso",
+      "lancado_por": "NADSON SILVA LOPES DOS SANTOS",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768573107801,
+      "data": "16/01/2026",
+      "hora": "11:18:27",
+      "evento": "Login",
+      "descricao": "Login realizado com sucesso",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "normal"
+    },
+    {
+      "id": 1768573254243,
+      "data": "16/01/2026",
+      "hora": "11:20:54",
+      "evento": "Alteração de Status",
+      "descricao": "Usuário Administrador agora está Ativo",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    },
+    {
+      "id": 1768573257455,
+      "data": "16/01/2026",
+      "hora": "11:20:57",
+      "evento": "Alteração de Status",
+      "descricao": "Usuário Administrador agora está Inativo",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    },
+    {
+      "id": 1768573261204,
+      "data": "16/01/2026",
+      "hora": "11:21:01",
+      "evento": "Alteração de Status",
+      "descricao": "Usuário Administrador agora está Ativo",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    },
+    {
+      "id": 1768581910925,
+      "data": "16/01/2026",
+      "hora": "13:45:11",
+      "evento": "Alteração de Status",
+      "descricao": "Usuário ELIAS ALVES SANTANA agora está Ativo",
+      "lancado_por": "Administrador",
+      "aprovado_por": null,
+      "criticidade": "critico"
+    }
+  ],
+  "atividades": [],
+  "solicitacoes": []
+}

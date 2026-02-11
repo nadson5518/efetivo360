@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Ranking de Paralisação</title>
+  <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body class="app-body">
+
+<!-- ================= HEADER ================= -->
+<header class="app-header">
+  <div class="header-left">
+    <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
+    <span class="page-title">Ranking de Paralisação</span>
+  </div>
+  <div class="header-right">
+    <span class="user-name">Administrador</span>
+    <span class="user-role">ADM</span>
+  </div>
+</header>
+
+<!-- ================= CONTEÚDO ================= -->
+<main class="dashboard-container">
+
+<h1>Ranking de Líderes por Paralisação</h1>
+<p class="subtitle">
+  Horas totais de paralisação por líder (visão diária)
+</p>
+
+<!-- ================= FILTRO ================= -->
+<section class="filter-bar compact">
+
+  <select class="filter-select compact">
+    <option value="">Disciplina</option>
+    <option>Pintura</option>
+    <option>Montagem</option>
+    <option>Soldagem</option>
+  </select>
+
+  <input type="date" class="filter-input compact" />
+
+  <button class="secondary-btn small compact">Filtrar</button>
+
+</section>
+
+<!-- ================= RANKING ================= -->
+<section class="table-card">
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Posição</th>
+      <th>Líder</th>
+      <th>Disciplina</th>
+      <th>Horas em Paralisação</th>
+      <th>Criticidade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr class="event-critical">
+      <td>🥇 1º</td>
+      <td>Carlos Silva</td>
+      <td>Pintura</td>
+      <td>6h</td>
+      <td><span class="badge critical">Alta</span></td>
+    </tr>
+
+    <tr class="event-warning">
+      <td>🥈 2º</td>
+      <td>Lucas Rocha</td>
+      <td>Montagem</td>
+      <td>4h</td>
+      <td><span class="badge warning">Média</span></td>
+    </tr>
+
+    <tr class="event-normal">
+      <td>🥉 3º</td>
+      <td>Marcos Lima</td>
+      <td>Soldagem</td>
+      <td>2h</td>
+      <td><span class="badge normal">Baixa</span></td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+</section>
+
+</main>
+
+</body>
+</html>

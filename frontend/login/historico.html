@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Histórico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Histórico</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Carlos Silva</span>
+      <span class="user-role">Líder</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Histórico</h1>
+    <p class="subtitle">
+      Histórico completo de registros e alterações de status
+    </p>
+
+    <!-- FILTROS -->
+    <section class="history-filters">
+
+      <div class="filter-group">
+        <label>Período</label>
+        <div class="date-range">
+          <input type="date" />
+          <input type="date" />
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Tipo</label>
+        <select>
+          <option value="">Todos</option>
+          <option>RDC</option>
+          <option>Produção</option>
+          <option>Metas</option>
+          <option>Status</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Disciplina</label>
+        <select>
+          <option value="">Todas</option>
+          <option>Pintura</option>
+          <option>Montagem</option>
+        </select>
+      </div>
+
+    </section>
+
+    <!-- LISTA -->
+    <section class="history-list">
+
+      <!-- ITEM STATUS -->
+      <div class="history-card">
+
+        <div class="history-header">
+          <strong>Status — 10/01/2026</strong>
+          <span class="history-tag status">STATUS</span>
+        </div>
+
+        <p class="history-meta">
+          Colaborador: João Silva • Disciplina: Pintura
+        </p>
+
+        <div class="status-timeline">
+          <div class="status-row">
+            <span class="badge service">Em Serviço</span>
+            <span>Início: 07:00</span>
+            <span>Fim: 12:00</span>
+            <span>Duração: 5h00</span>
+          </div>
+
+          <div class="status-row">
+            <span class="badge lunch">Almoço</span>
+            <span>Início: 12:00</span>
+            <span>Fim: 13:00</span>
+            <span>Duração: 1h00</span>
+          </div>
+
+          <div class="status-row">
+            <span class="badge service">Em Serviço</span>
+            <span>Início: 13:00</span>
+            <span>Fim: 17:00</span>
+            <span>Duração: 4h00</span>
+          </div>
+        </div>
+
+        <p class="history-desc">
+          Atualizações lançadas pelo líder às <b>07:00</b>, <b>12:00</b> e <b>13:00</b>.
+        </p>
+
+      </div>
+
+      <!-- ITEM RDC -->
+      <div class="history-card">
+
+        <div class="history-header">
+          <strong>RDC — 10/01/2026</strong>
+          <span class="history-tag rdc">RDC</span>
+        </div>
+
+        <p class="history-desc">
+          RDC diário registrado com 3 atividades e condições climáticas normais.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

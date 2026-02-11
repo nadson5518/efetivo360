@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetivo360 | Solicitar Ajuste de Horário</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
+      <span class="page-title">Solicitar Ajuste de Horário</span>
+    </div>
+
+    <div class="header-right">
+      <span class="user-name">Carlos Silva</span>
+      <span class="user-role">Líder</span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="dashboard-container">
+
+    <h1>Ajuste de Horário e Status</h1>
+    <p class="subtitle">
+      Solicite correção de horário e/ou status lançado incorretamente
+    </p>
+
+    <!-- FORMULÁRIO -->
+    <section class="adjust-card">
+
+      <!-- COLABORADOR -->
+      <div class="form-group">
+        <label>Colaborador</label>
+        <select>
+          <option value="">Selecione o colaborador</option>
+          <option>João Silva</option>
+          <option>Maria Santos</option>
+          <option>Carlos Lima</option>
+        </select>
+      </div>
+
+      <!-- DATA -->
+      <div class="form-group">
+        <label>Data de Referência</label>
+        <input type="date" />
+      </div>
+
+      <!-- HORÁRIO LANÇADO -->
+      <div class="form-group">
+        <label>Horário Lançado (atual)</label>
+        <select>
+          <option value="">Selecione o horário lançado</option>
+          <option>Entrada — 07:12</option>
+          <option>Saída — 16:45</option>
+          <option>Início Almoço — 12:03</option>
+          <option>Fim Almoço — 12:58</option>
+        </select>
+      </div>
+
+      <!-- TIPO DE AJUSTE -->
+      <div class="form-group">
+        <label>Tipo de Ajuste de Horário</label>
+        <select>
+          <option value="">Selecione</option>
+          <option>Entrada</option>
+          <option>Saída</option>
+          <option>Entrada e Saída</option>
+        </select>
+      </div>
+
+      <!-- HORÁRIOS CORRETOS -->
+      <div class="adjust-grid">
+        <div class="form-group">
+          <label>Horário de Entrada Correto</label>
+          <input type="time" />
+        </div>
+
+        <div class="form-group">
+          <label>Horário de Saída Correto</label>
+          <input type="time" />
+        </div>
+      </div>
+
+      <!-- STATUS -->
+      <div class="form-group">
+        <label>Status Correto no Período</label>
+        <select>
+          <option value="">Selecione o status</option>
+          <option>Em Serviço</option>
+          <option>Almoço</option>
+          <option>Paralisação</option>
+          <option>Almoxarifado</option>
+          <option>Falta</option>
+          <option>Folga</option>
+        </select>
+      </div>
+
+      <!-- MOTIVO DA PARALISAÇÃO (CONDICIONAL) -->
+      <div class="form-group stop-reason-inline">
+        <label>Motivo da Paralisação</label>
+        <select>
+          <option value="">Selecione o motivo</option>
+          <option>Chuva</option>
+          <option>Falta de material</option>
+          <option>Liberação de área</option>
+          <option>Problema com equipamento</option>
+          <option>Orientação da segurança</option>
+        </select>
+      </div>
+
+      <!-- MOTIVO GERAL -->
+      <div class="form-group">
+        <label>Motivo da Solicitação</label>
+        <textarea placeholder="Explique detalhadamente o ajuste solicitado"></textarea>
+      </div>
+
+      <!-- AÇÕES -->
+      <div class="form-actions">
+        <button class="secondary-btn">Cancelar</button>
+        <button class="primary-btn">Enviar Solicitação</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
