@@ -9,7 +9,6 @@
 
 <body class="app-body">
 
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
@@ -17,18 +16,16 @@
     </div>
 
     <div class="header-right">
-      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-name" id="liderNome">Usuário</span>
       <span class="user-role">Líder</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
 
     <h1>Painel do Líder</h1>
     <p class="subtitle">Visão geral da equipe, produção e controle</p>
 
-    <!-- INFORMATIVO DA EQUIPE -->
     <section class="team-info">
 
       <div class="team-cards">
@@ -37,54 +34,54 @@
           <span class="status-dot green"></span>
           <div>
             <small>Em Serviço</small>
-            <strong>2</strong>
+            <strong id="countEmServico">0</strong>
           </div>
-          <span class="status-percent green">66.7%</span>
+          <span class="status-percent green" id="percEmServico">0.0%</span>
         </div>
 
         <div class="status-card">
           <span class="status-dot orange"></span>
           <div>
             <small>Almoço</small>
-            <strong>1</strong>
+            <strong id="countAlmoco">0</strong>
           </div>
-          <span class="status-percent orange">33.3%</span>
+          <span class="status-percent orange" id="percAlmoco">0.0%</span>
         </div>
 
         <div class="status-card">
           <span class="status-dot blue"></span>
           <div>
             <small>Almoxarifado</small>
-            <strong>0</strong>
+            <strong id="countAlmoxarifado">0</strong>
           </div>
-          <span class="status-percent blue">0.0%</span>
+          <span class="status-percent blue" id="percAlmoxarifado">0.0%</span>
         </div>
 
         <div class="status-card">
           <span class="status-dot red"></span>
           <div>
             <small>Paralisação</small>
-            <strong>0</strong>
+            <strong id="countParalisacao">0</strong>
           </div>
-          <span class="status-percent red">0.0%</span>
+          <span class="status-percent red" id="percParalisacao">0.0%</span>
         </div>
 
         <div class="status-card">
           <span class="status-dot gray"></span>
           <div>
             <small>Falta</small>
-            <strong>0</strong>
+            <strong id="countFalta">0</strong>
           </div>
-          <span class="status-percent gray">0.0%</span>
+          <span class="status-percent gray" id="percFalta">0.0%</span>
         </div>
 
         <div class="status-card">
           <span class="status-dot dark"></span>
           <div>
             <small>Folga</small>
-            <strong>0</strong>
+            <strong id="countFolga">0</strong>
           </div>
-          <span class="status-percent dark">0.0%</span>
+          <span class="status-percent dark" id="percFolga">0.0%</span>
         </div>
 
       </div>
@@ -92,96 +89,92 @@
       <div class="team-summary">
         <div>
           <small>Minha Equipe</small>
-          <strong>3</strong>
+          <strong id="resumoMinhaEquipe">0</strong>
         </div>
 
         <div>
           <small>Em Serviço</small>
-          <strong class="green-text">2</strong>
+          <strong class="green-text" id="resumoEmServico">0</strong>
         </div>
 
         <div>
           <small>Efetividade</small>
-          <strong class="green-text">66.7%</strong>
+          <strong class="green-text" id="resumoEfetividade">0.0%</strong>
         </div>
 
-        <div class="summary-time">
-          ⏱️ 21:55
-        </div>
+        <div class="summary-time" id="resumoHorario">⏱️ --:--</div>
       </div>
 
     </section>
 
-    <!-- GESTÃO -->
     <section class="panel-section">
       <h2>👥 Gestão</h2>
       <div class="dashboard-cards">
 
-        <div class="card">
+        <a href="gerenciar-colaboradores.html" class="card">
           <span class="card-icon">👥</span>
           <h3>Gerenciar Equipe</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="transferir-colaboradores.html" class="card">
           <span class="card-icon">🔁</span>
           <h3>Transferir Colaboradores</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="gerenciar-grupos.html" class="card">
           <span class="card-icon">🧩</span>
           <h3>Gerenciar Grupos (Atividades)</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="gerenciar-metas.html" class="card">
           <span class="card-icon">🎯</span>
           <h3>Gerenciar Metas</h3>
-        </div>
+        </a>
 
       </div>
     </section>
 
-    <!-- PRODUÇÃO -->
     <section class="panel-section">
       <h2>📊 Produção e Controle</h2>
       <div class="dashboard-cards">
 
-        <div class="card">
+        <a href="registrar-producao.html" class="card">
           <span class="card-icon">📝</span>
           <h3>Registrar Produção</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="rdc.html" class="card">
           <span class="card-icon">📄</span>
           <h3>RDC - Relatório Diário</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="historico.html" class="card">
           <span class="card-icon">📈</span>
           <h3>Relatórios</h3>
-        </div>
+        </a>
 
       </div>
     </section>
 
-    <!-- SOLICITAÇÕES -->
     <section class="panel-section">
       <h2>🕒 Solicitações</h2>
       <div class="dashboard-cards">
 
-        <div class="card">
+        <a href="solicitacoes.html" class="card">
           <span class="card-icon">📬</span>
           <h3>Solicitações</h3>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="solicitar-ajuste-horario.html" class="card">
           <span class="card-icon">⏱️</span>
           <h3>Solicitar Ajuste Horário</h3>
-        </div>
+        </a>
 
       </div>
     </section>
 
   </main>
 
+  <script src="lider-painel.js"></script>
 </body>
 </html>

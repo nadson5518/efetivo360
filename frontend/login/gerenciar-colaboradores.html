@@ -8,82 +8,24 @@
 </head>
 
 <body class="app-body">
-
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
       <span class="page-title">Gerenciar Colaboradores</span>
     </div>
-
     <div class="header-right">
-      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-name" id="equipeUserNome">Usuário</span>
       <span class="user-role">Líder</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
+    <h1>Minha Equipe</h1>
+    <p class="subtitle">Visualize colaboradores vinculados ao seu time.</p>
 
-    <h1>Gerenciar Colaboradores</h1>
-    <p class="subtitle">Cadastro e organização da equipe</p>
-
-    <!-- AÇÕES -->
-    <div class="actions-bar">
-      <input type="text" placeholder="Buscar por nome ou matrícula" />
-      <select>
-        <option value="">Filtrar por disciplina</option>
-        <option>Pintura</option>
-        <option>Montagem</option>
-        <option>Soldagem</option>
-      </select>
-      <button class="primary-btn">➕ Adicionar</button>
-    </div>
-
-    <!-- LISTA -->
-    <section class="collaborator-list">
-
-      <!-- CARD -->
-      <div class="collaborator-card compact">
-        <div class="collaborator-left">
-          <div class="avatar">👤</div>
-
-          <div class="main-info">
-            <strong>Fernando Dias</strong>
-            <span class="meta">300003 • Pintura • Técnico</span>
-            <span class="leader">Líder: Carlos Silva</span>
-          </div>
-        </div>
-
-        <div class="collaborator-right">
-          <span class="status-tag ativo">Ativo</span>
-          <button class="icon-btn">✏️</button>
-          <button class="icon-btn danger">❌</button>
-        </div>
-      </div>
-
-      <!-- CARD -->
-      <div class="collaborator-card compact">
-        <div class="collaborator-left">
-          <div class="avatar">👤</div>
-
-          <div class="main-info">
-            <strong>Maria Santos</strong>
-            <span class="meta">654321 • Montagem • Montadora</span>
-            <span class="leader">Líder: Carlos Silva</span>
-          </div>
-        </div>
-
-        <div class="collaborator-right">
-          <span class="status-tag afastado">Afastado</span>
-          <button class="icon-btn">✏️</button>
-          <button class="icon-btn danger">❌</button>
-        </div>
-      </div>
-
-    </section>
-
+    <section class="collaborator-list" id="equipeLista"></section>
   </main>
 
+  <script src="gerenciar-colaboradores.js"></script>
 </body>
 </html>

@@ -1,4 +1,22 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = obterApiUrl();
+
+function obterApiUrl() {
+  if (window.__API_URL) return window.__API_URL;
+
+  const host = window.location.hostname;
+  const origin = window.location.origin;
+  const isLocalHost = host === "localhost" || host === "127.0.0.1";
+
+  if (isLocalHost) {
+    if (window.location.port === "3001") {
+      return `${origin}/api`;
+    }
+
+    return "http://localhost:3001/api";
+  }
+
+  return `${origin}/api`;
+}
 let editandoId = null;
 
 // ELEMENTOS
