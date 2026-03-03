@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = "https://efetivo360.onrender.com/api";
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 
@@ -55,3 +55,4 @@ document
       erro.textContent = "Erro ao conectar com o servidor";
     }
 });
+
