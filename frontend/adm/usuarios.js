@@ -1,4 +1,7 @@
-const API_URL = "https://efetivo360.onrender.com/api";
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3001/api"
+    : "https://efetivo360.onrender.com/api";
 let editandoId = null;
 
 // ELEMENTOS
@@ -147,4 +150,5 @@ async function alterarStatus(id) {
 
 // INIT
 carregarUsuarios();
+
 
