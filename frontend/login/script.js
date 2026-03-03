@@ -1,4 +1,28 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = obterApiUrl();
+
+function obterApiUrl() {
+  if (window.__API_URL) return window.__API_URL;
+
+  const host = window.location.hostname;
+  const origin = window.location.origin;
+  const isLocalHost = host === "localhost" || host === "127.0.0.1";
+
+  if (isLocalHost) {
+    if (window.location.port === "3001") {
+      return `${origin}/api`;
+    }
+
+    return "http://localhost:3001/api";
+  }
+
+  return `${origin}/api`;
+}
+
+function obterRotaPorPerfil(perfil) {
+  if (perfil === "ADM") return "../adm/dashboard.html";
+  if (perfil === "Lider") return "lider-painel.html";
+  return "dashboard.html";
+}
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -27,10 +51,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     if (data.primeiroAcesso) {
       window.location.href = "trocar-senha.html";
-    } else if (data.perfil === "ADM") {
-      window.location.href = "../adm/dashboard.html";
     } else {
-      window.location.href = "../lider/dashboard.html";
+      window.location.href = obterRotaPorPerfil(data.perfil);
     }
 
   } catch (err) {

@@ -32,7 +32,7 @@
 <!-- ================= FILTROS ================= -->
 <section class="filter-bar compact">
 
-  <select class="filter-select compact">
+  <select id="filtroTipo" class="filter-select compact">
     <option value="">Tipo de Evento</option>
     <option>Login</option>
     <option>Paralisação</option>
@@ -81,64 +81,7 @@
     </tr>
   </thead>
 
-  <tbody>
-
-  <!-- ================= DIA ================= -->
-  <tr class="group-day">
-    <td colspan="6">📅 <strong>15/01/2026</strong></td>
-  </tr>
-
-  <!-- ================= USUÁRIO ================= -->
-  <tr class="group-user">
-    <td colspan="6">👤 <strong>Carlos Silva (Líder)</strong></td>
-  </tr>
-
-  <!-- EVENTO CRÍTICO -->
-  <tr class="event-critical">
-    <td>09:10</td>
-    <td>Paralisação <span class="badge critical">Crítico</span></td>
-    <td>Carlos Silva (Líder)</td>
-    <td>—</td>
-    <td>Status alterado para Paralisação</td>
-    <td>Motivo: Chuva • 2h</td>
-  </tr>
-
-  <!-- EVENTO CRÍTICO -->
-  <tr class="event-critical">
-    <td>11:40</td>
-    <td>Ajuste de Status <span class="badge critical">Crítico</span></td>
-    <td>Carlos Silva (Líder)</td>
-    <td>Administrador (ADM)</td>
-    <td>Ajuste aprovado</td>
-    <td>Execução → Paralisação</td>
-  </tr>
-
-  <!-- ================= USUÁRIO ================= -->
-  <tr class="group-user">
-    <td colspan="6">👤 <strong>Administrador (ADM)</strong></td>
-  </tr>
-
-  <!-- EVENTO MÉDIO -->
-  <tr class="event-warning">
-    <td>15:20</td>
-    <td>Solicitação <span class="badge warning">Atenção</span></td>
-    <td>Lucas Rocha (Líder)</td>
-    <td>Administrador (ADM)</td>
-    <td>Solicitação aprovada</td>
-    <td>Ajuste de produção</td>
-  </tr>
-
-  <!-- EVENTO NORMAL -->
-  <tr class="event-normal">
-    <td>17:05</td>
-    <td>Produção <span class="badge normal">Info</span></td>
-    <td>Lucas Rocha (Líder)</td>
-    <td>—</td>
-    <td>Lançamento de produção</td>
-    <td>120 peças</td>
-  </tr>
-
-</tbody>
+  <tbody></tbody>
 
 </table>
 
@@ -147,44 +90,7 @@
 </main>
 
 <!-- ================= SCRIPT ================= -->
-<script>
-  const toggle = document.getElementById("onlyCritical");
-  const rows = document.querySelectorAll("#historicoTable tbody tr");
-
-  toggle.addEventListener("change", () => {
-    rows.forEach(row => {
-      if (toggle.checked) {
-        row.style.display = row.classList.contains("event-critical")
-          ? ""
-          : "none";
-      } else {
-        row.style.display = "";
-      }
-    });
-  });
-</script>
-<script>
-  const params = new URLSearchParams(window.location.search);
-
-  // Ativa "Somente críticos"
-  if (params.get("critico") === "1") {
-    const toggle = document.getElementById("onlyCritical");
-    if (toggle) {
-      toggle.checked = true;
-      toggle.dispatchEvent(new Event("change"));
-    }
-  }
-
-  // Filtra por tipo de evento (visual)
-  const tipo = params.get("tipo");
-  if (tipo) {
-    document.querySelectorAll("#historicoTable tbody tr").forEach(row => {
-      if (!row.innerText.toLowerCase().includes(tipo.toLowerCase())) {
-        row.style.display = "none";
-      }
-    });
-  }
-</script>
+<script src="historico.js"></script>
 
 </body>
 </html>

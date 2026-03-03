@@ -37,12 +37,12 @@
       <div class="rdc-grid">
         <div class="form-group">
           <label>Data</label>
-          <input type="date" />
+          <input id="rdcData" type="date" />
         </div>
 
         <div class="form-group">
-          <label>Líder</label>
-          <input type="text" value="Carlos Silva" disabled />
+          <label>Frente de Trabalho</label>
+          <input id="rdcFrente" type="text" placeholder="Ex: Área A / Setor 03" />
         </div>
       </div>
 
@@ -51,19 +51,18 @@
 
       <div class="rdc-grid">
         <div class="form-group">
-          <label>Manhã</label>
-          <select>
+          <label>Clima</label>
+          <select id="rdcClima">
+            <option value="">Selecione</option>
             <option>Bom</option>
+            <option>Nublado</option>
             <option>Ruim</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Tarde</label>
-          <select>
-            <option>Bom</option>
-            <option>Ruim</option>
-          </select>
+          <label>Ocorrências</label>
+          <textarea id="rdcOcorrencias" placeholder="Descreva ocorrências relevantes"></textarea>
         </div>
       </div>
 
@@ -95,7 +94,7 @@
 
         <div class="form-group">
           <label>Observação da atividade</label>
-          <textarea placeholder="Observações específicas desta atividade"></textarea>
+          <textarea id="rdcAtividades" placeholder="Resumo das atividades executadas no dia"></textarea>
         </div>
 
       </div>
@@ -132,13 +131,14 @@
 
       <!-- AÇÕES -->
       <div class="form-actions">
-        <button class="secondary-btn">Cancelar</button>
-        <button class="primary-btn">Salvar RDC do Dia</button>
+        <button id="btnCancelarRdc" type="button" class="secondary-btn">Cancelar</button>
+        <button id="btnSalvarRdc" type="button" class="primary-btn">Salvar RDC do Dia</button>
       </div>
 
     </section>
 
   </main>
 
+  <script src="rdc.js"></script>
 </body>
 </html>

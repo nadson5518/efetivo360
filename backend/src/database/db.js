@@ -9,6 +9,9 @@ const adapter = new JSONFile(file);
 const defaultData = {
   usuarios: [],
   historico: [],
+  producoes: [],
+  rdc: [],
+  metas: [],
   atividades: [],
   solicitacoes: []
 };

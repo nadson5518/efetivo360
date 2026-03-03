@@ -8,111 +8,39 @@
 </head>
 
 <body class="app-body">
-
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="../login/assets/logo-efetivo360.png" alt="Efetivo360" />
       <span class="page-title">Metas</span>
     </div>
-
     <div class="header-right">
-      <span class="user-name">Administrador</span>
+      <span class="user-name" id="admNome">Administrador</span>
       <span class="user-role">ADM</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
-
     <h1>Gerenciar Metas</h1>
-    <p class="subtitle">
-      Metas por disciplina e por líder
-    </p>
+    <p class="subtitle">Metas cadastradas por disciplina e por líder.</p>
 
-    <!-- AÇÕES -->
-    <section class="user-actions">
-      <button class="primary-btn">➕ Nova Meta</button>
-    </section>
-
-    <!-- LISTA -->
     <section class="table-card">
-
       <table class="data-table">
         <thead>
           <tr>
-            <th>Tipo</th>
+            <th>Título</th>
             <th>Disciplina</th>
             <th>Líder</th>
-            <th>Meta</th>
             <th>Período</th>
+            <th>Meta</th>
             <th>Realizado</th>
             <th>Cumprimento</th>
-            <th>Status</th>
-            <th>Ações</th>
           </tr>
         </thead>
-
-        <tbody>
-
-          <!-- META DISCIPLINA -->
-          <tr>
-            <td>Disciplina</td>
-            <td>Pintura</td>
-            <td>—</td>
-            <td>500 m²</td>
-            <td>Mensal</td>
-            <td>320 m²</td>
-            <td>
-              <div class="progress-bar">
-                <div class="progress" style="width: 64%;">64%</div>
-              </div>
-            </td>
-            <td><span class="status-badge ativo">Ativa</span></td>
-            <td class="actions">✏️ 🔒</td>
-          </tr>
-
-          <!-- META LÍDER -->
-          <tr>
-            <td>Líder</td>
-            <td>Pintura</td>
-            <td>Carlos Silva</td>
-            <td>200 m²</td>
-            <td>Mensal</td>
-            <td>140 m²</td>
-            <td>
-              <div class="progress-bar">
-                <div class="progress warning" style="width: 70%;">70%</div>
-              </div>
-            </td>
-            <td><span class="status-badge ativo">Ativa</span></td>
-            <td class="actions">✏️ 🔒</td>
-          </tr>
-
-          <!-- META FINALIZADA -->
-          <tr>
-            <td>Líder</td>
-            <td>Montagem</td>
-            <td>Lucas Rocha</td>
-            <td>120 peças</td>
-            <td>Semanal</td>
-            <td>120 peças</td>
-            <td>
-              <div class="progress-bar">
-                <div class="progress finished" style="width: 100%;">100%</div>
-              </div>
-            </td>
-            <td><span class="status-badge inativo">Encerrada</span></td>
-            <td class="actions">🔒</td>
-          </tr>
-
-        </tbody>
-
+        <tbody id="metasTabela"></tbody>
       </table>
-
     </section>
-
   </main>
 
+  <script src="metas.js"></script>
 </body>
 </html>

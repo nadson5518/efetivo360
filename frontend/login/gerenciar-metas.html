@@ -8,87 +8,60 @@
 </head>
 
 <body class="app-body">
-
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
       <span class="page-title">Gerenciar Metas</span>
     </div>
-
     <div class="header-right">
-      <span class="user-name">Usuário Exemplo</span>
+      <span class="user-name" id="metaUserNome">Usuário</span>
       <span class="user-role">Líder</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
-
     <h1>Metas</h1>
-    <p class="subtitle">
-      Acompanhe suas metas e as metas da disciplina
-    </p>
+    <p class="subtitle">Cadastre e acompanhe metas reais da sua disciplina.</p>
 
-    <!-- METAS DO LÍDER -->
-    <section class="goals-section">
-      <h2>🧑‍🏭 Minhas Metas</h2>
-
-      <div class="goals-list">
-
-        <div class="goal-card">
-          <div class="goal-header">
-            <div>
-              <strong>Meta Diária</strong>
-              <span class="goal-info">Líder: Carlos Silva</span>
-            </div>
-            <span class="goal-percent success">80%</span>
+    <section class="request-card">
+      <h2>Nova Meta</h2>
+      <form id="metaForm">
+        <div class="form-group">
+          <label for="metaTitulo">Título</label>
+          <input id="metaTitulo" type="text" placeholder="Ex: Meta diária de pintura" required />
+        </div>
+        <div class="form-group">
+          <label for="metaPeriodo">Período</label>
+          <select id="metaPeriodo" required>
+            <option value="">Selecione</option>
+            <option value="Diária">Diária</option>
+            <option value="Semanal">Semanal</option>
+            <option value="Mensal">Mensal</option>
+          </select>
+        </div>
+        <div class="adjust-grid">
+          <div class="form-group">
+            <label for="metaValor">Valor da Meta</label>
+            <input id="metaValor" type="number" min="1" required />
           </div>
-
-          <div class="goal-progress">
-            <div class="progress-bar">
-              <div class="progress-fill success" style="width: 80%;"></div>
-            </div>
-            <div class="goal-values">
-              <span>Produção: 80</span>
-              <span>Meta: 100</span>
-            </div>
+          <div class="form-group">
+            <label for="metaAtual">Valor Atual</label>
+            <input id="metaAtual" type="number" min="0" value="0" />
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- METAS DA DISCIPLINA -->
-    <section class="goals-section">
-      <h2>🧩 Metas da Disciplina</h2>
-
-      <div class="goals-list">
-
-        <div class="goal-card">
-          <div class="goal-header">
-            <div>
-              <strong>Meta Mensal</strong>
-              <span class="goal-info">Disciplina: Pintura</span>
-            </div>
-            <span class="goal-percent warning">45%</span>
-          </div>
-
-          <div class="goal-progress">
-            <div class="progress-bar">
-              <div class="progress-fill warning" style="width: 45%;"></div>
-            </div>
-            <div class="goal-values">
-              <span>Produção: 450</span>
-              <span>Meta: 1000</span>
-            </div>
-          </div>
+        <div class="form-actions">
+          <button type="button" class="secondary-btn" id="metaCancelar">Cancelar</button>
+          <button type="submit" class="primary-btn">Salvar Meta</button>
         </div>
-
-      </div>
+      </form>
     </section>
 
+    <section class="goals-section">
+      <h2>📊 Metas Cadastradas</h2>
+      <div class="goals-list" id="metasLista"></div>
+    </section>
   </main>
 
+  <script src="gerenciar-metas.js"></script>
 </body>
 </html>

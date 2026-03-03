@@ -8,73 +8,34 @@
 </head>
 
 <body class="app-body">
-
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
       <span class="page-title">Transferir Colaboradores</span>
     </div>
-
     <div class="header-right">
-      <span class="user-name">Carlos Silva</span>
-      <span class="user-role">Líder • Pintura</span>
+      <span class="user-name" id="transferUserNome">Usuário</span>
+      <span class="user-role">Líder</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
-
     <h1>Transferência de Colaboradores</h1>
-    <p class="subtitle">
-      Gerencie colaboradores disponíveis e da sua equipe
-    </p>
+    <p class="subtitle">Gerencie colaboradores disponíveis e da sua equipe.</p>
 
     <section class="transfer-grid">
-
-      <!-- DISPONÍVEIS -->
       <div class="transfer-card">
         <h2>Colaboradores Disponíveis</h2>
-
-        <ul class="transfer-list">
-          <li>
-            João Silva
-            <button class="action-btn add">➕ Adicionar</button>
-          </li>
-          <li>
-            Maria Santos
-            <button class="action-btn add">➕ Adicionar</button>
-          </li>
-        </ul>
-
-        <p class="hint">
-          Apenas colaboradores sem equipe aparecem aqui
-        </p>
+        <ul class="transfer-list" id="listaDisponiveis"></ul>
       </div>
 
-      <!-- MINHA EQUIPE -->
       <div class="transfer-card">
         <h2>Minha Equipe</h2>
-
-        <ul class="transfer-list">
-          <li>
-            Carlos Lima
-            <button class="action-btn remove">➖ Remover</button>
-          </li>
-          <li>
-            Ana Pereira
-            <button class="action-btn remove">➖ Remover</button>
-          </li>
-        </ul>
-
-        <p class="hint">
-          Remover envia o colaborador para a lista de disponíveis
-        </p>
+        <ul class="transfer-list" id="listaEquipe"></ul>
       </div>
-
     </section>
-
   </main>
 
+  <script src="transferir-colaboradores.js"></script>
 </body>
 </html>

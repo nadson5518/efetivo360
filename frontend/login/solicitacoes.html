@@ -8,106 +8,59 @@
 </head>
 
 <body class="app-body">
-
-  <!-- HEADER -->
   <header class="app-header">
     <div class="header-left">
       <img src="assets/logo-efetivo360.png" alt="Efetivo360" />
       <span class="page-title">Solicitações</span>
     </div>
-
     <div class="header-right">
-      <span class="user-name">João Silva</span>
-      <span class="user-role">Colaborador</span>
+      <span class="user-name" id="solUserNome">Usuário</span>
+      <span class="user-role" id="solUserPerfil">Perfil</span>
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="dashboard-container">
-
     <h1>Solicitações</h1>
-    <p class="subtitle">
-      Envie solicitações para o administrador e acompanhe o status
-    </p>
+    <p class="subtitle">Envie solicitações para o administrador e acompanhe o status.</p>
 
-    <!-- NOVA SOLICITAÇÃO -->
     <section class="request-card">
-
       <h2>Nova Solicitação</h2>
+      <form id="solicitacaoForm">
+        <div class="form-group">
+          <label for="solTipo">Tipo de Solicitação</label>
+          <select id="solTipo" required>
+            <option value="">Selecione o tipo</option>
+            <option>Ajuste de Horário</option>
+            <option>Correção de Status</option>
+            <option>Alteração de RDC</option>
+            <option>Alteração de Produção</option>
+            <option>Outros</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label>Tipo de Solicitação</label>
-        <select>
-          <option value="">Selecione o tipo</option>
-          <option>Ajuste de Horário</option>
-          <option>Correção de Status</option>
-          <option>Alteração de RDC</option>
-          <option>Alteração de Produção</option>
-          <option>Outros</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="solData">Data de Referência</label>
+          <input id="solData" type="date" required />
+        </div>
 
-      <div class="form-group">
-        <label>Data de Referência</label>
-        <input type="date" />
-      </div>
+        <div class="form-group">
+          <label for="solDescricao">Descrição / Motivo</label>
+          <textarea id="solDescricao" placeholder="Descreva detalhadamente a solicitação" required></textarea>
+        </div>
 
-      <div class="form-group">
-        <label>Descrição / Motivo</label>
-        <textarea placeholder="Descreva detalhadamente a solicitação"></textarea>
-      </div>
-
-      <div class="form-actions">
-        <button class="secondary-btn">Cancelar</button>
-        <button class="primary-btn">Enviar Solicitação</button>
-      </div>
-
+        <div class="form-actions">
+          <button class="secondary-btn" type="button" id="solCancelar">Cancelar</button>
+          <button class="primary-btn" type="submit">Enviar Solicitação</button>
+        </div>
+      </form>
     </section>
 
-    <!-- HISTÓRICO -->
     <section class="request-history">
-
       <h2>Minhas Solicitações</h2>
-
-      <!-- ITEM -->
-      <div class="request-item">
-        <div class="request-header">
-          <strong>Ajuste de Horário</strong>
-          <span class="request-status pending">Pendente</span>
-        </div>
-        <p>
-          Data: 08/01/2026<br />
-          Solicitação de ajuste de entrada para 07:30.
-        </p>
-      </div>
-
-      <!-- ITEM -->
-      <div class="request-item">
-        <div class="request-header">
-          <strong>Alteração de RDC</strong>
-          <span class="request-status approved">Aprovada</span>
-        </div>
-        <p>
-          Data: 05/01/2026<br />
-          Correção de observação da atividade de pintura.
-        </p>
-      </div>
-
-      <!-- ITEM -->
-      <div class="request-item">
-        <div class="request-header">
-          <strong>Alteração de Produção</strong>
-          <span class="request-status rejected">Reprovada</span>
-        </div>
-        <p>
-          Data: 03/01/2026<br />
-          Produção informada incorretamente.
-        </p>
-      </div>
-
+      <div id="solicitacoesLista"></div>
     </section>
-
   </main>
 
+  <script src="solicitacoes.js"></script>
 </body>
 </html>
