@@ -33,7 +33,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     } else if (data.perfil === "ADM") {
       window.location.href = "../adm/dashboard.html";
     } else {
-      window.location.href = "../lider/dashboard.html";
+      window.location.href = "../login/dashboard.html";
     }
 
   } catch (err) {
