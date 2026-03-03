@@ -1,4 +1,7 @@
-const API_URL = "https://efetivo360.onrender.com/api";
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3001/api"
+    : "https://efetivo360.onrender.com/api";
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -37,4 +40,5 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     erro.textContent = "Erro ao conectar com o servidor";
   }
 });
+
 
