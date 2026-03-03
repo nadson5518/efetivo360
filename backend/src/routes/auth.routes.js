@@ -185,5 +185,29 @@ router.get("/lideres", async (req, res) => {
     }))
   );
 });
+/* ================= TROCAR SENHA ================= */
+router.post("/trocar-senha", async (req, res) => {
+  const { matricula, novaSenha } = req.body;
+
+  if (!matricula || !novaSenha) {
+    return res.status(400).json({ erro: "Dados inválidos" });
+  }
+
+  await db.read();
+
+  const usuario = db.data.usuarios.find(u => u.matricula === matricula);
+
+  if (!usuario) {
+    return res.status(404).json({ erro: "Usuário não encontrado" });
+  }
+
+  usuario.senha = novaSenha;
+  usuario.primeiroAcesso = false;
+
+  await db.write();
+
+  res.json({ sucesso: true });
+});
 
 module.exports = router;
+
